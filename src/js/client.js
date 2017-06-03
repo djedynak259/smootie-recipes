@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {render, reactDOM} from 'react-dom';
 import {BrowserRouter, Route, Link} from 'react-router-dom';
 
 import Layout from './components/Layout';
@@ -10,13 +10,10 @@ import Settings from './pages/Settings';
 const app = document.getElementById('app');
 
 
-ReactDOM.render((
+render(
 	<BrowserRouter>
 		<Route path ="/" component={Layout}></Route>
-		<Route path ="Featured" component={Featured}></Route>
-		<Route path ="Archived" component={Archived}></Route>
-		<Route path ="Settings" component={Settings}></Route>
 	</BrowserRouter>
-),app);
+,app);
 	
 
